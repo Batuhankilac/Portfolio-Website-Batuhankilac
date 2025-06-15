@@ -85,6 +85,11 @@ p.danger {
 }
 /************ Navbar Css ************/
 
+.Logo-icon {
+  width: 200px;
+  height: auto;
+}
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -95,10 +100,10 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #ff914d;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: 14%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -126,13 +131,13 @@ span.navbar-text {
 .social-icons a {
     width: 42px;
     height: 42px;
-    background: rgba(217, 217, 217, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     display: inline-flex;
-    border-radius: 50%; /* Yuvarlak şekil için */
+    border-radius: 20%; /* Yuvarlak şekil için */
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(226, 102, 2, 0);
     transition: 0.3s ease-in-out;
 }
 .social-icons a::before {
@@ -140,8 +145,8 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
+    background-color: #e0feca;
+    border-radius: 20%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
 }
@@ -154,10 +159,21 @@ span.navbar-text {
   width: 24px; /* İkonun boyutu */
   z-index: 1;
   transition: 0.3s ease-in-out;
+  object-fit: contain;
 }
 
-.social-icons a:hover img {
-  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+.github-logo {
+  transform: scale(1.8);
+}
+
+.github-logo:hover {
+  transform: scale(1.98); /* Hoverda GitHub ikonunu büyütme efekti */
+  filter: brightness(0) saturate(100%) invert(55%) sepia(83%) saturate(3500%) hue-rotate(10deg) brightness(97%) contrast(110%);
+}
+
+.social-icons a:hover img:not(.github-logo) {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(83%) saturate(3500%) hue-rotate(10deg) brightness(97%) contrast(110%);
+  /* İkonun rengini değiştirmek için yukarıdaki filtreyi kullanabilirsiniz */
   transform: scale(1.1); /* Hoverda ikon büyütme efekti */
 }
 
@@ -245,7 +261,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.svg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -254,30 +270,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(120deg, #fa6602 0%, #e0feca 100%);
+  border: 0.5px solid rgba(255, 255, 255, 1);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
 }
+
 .banner h1 {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: bolder;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  color: #ff914d;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #FFFFFF;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  font-weight: bold;
 }
 .banner button {
   color: #fff;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 20px;
   margin-top: 60px;
   letter-spacing: 0.8px;
@@ -318,7 +337,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-bx {
-  background: #151515;
+  background: #ff914d;
   border-radius: 64px;
   text-align: center;
   padding: 60px 40px;
@@ -327,9 +346,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
+  color: #fff;
 }
 .skill p {
-    color: #B8B8B8;
+    color: #fff;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -359,7 +379,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   right: 0;
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 18px;
   z-index: 2;
 }
@@ -371,15 +391,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .background-image-left {
-  top: 28%;
+  top: 0;
   position: absolute;
   bottom: 0;
-  width: 40%;
+  width: 50%;
+  height: 130vh;
   z-index: -4;
 }
 
 /************ Projects Css ************/
 .project {
+  width: 100vw;
   padding: 80px 0;
   position: relative;
   background-color: black;
@@ -497,12 +519,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 .background-image-right {
-  top: 20%;
   position: absolute;
-  bottom: 0;
-  width: 35%;
+  top: 0;
   right: 0;
+  width: 50%;
+  height: 220vh;  /* Tüm ekran yüksekliği boyunca uzansın */
   z-index: -4;
+  object-fit: cover;
 }
 
 /************ Contacts Css ************/

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import githublogo from '../assets/img/github-icon.svg';
+import githublogo from '../assets/img/github-logo.png';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import logo from "../assets/img/logo_turuncu.png";
 
 
 export const NavBar = () => {
@@ -32,7 +32,7 @@ export const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" className='Logo-icon'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <span className="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@ export const NavBar = () => {
                   <img src={navIcon1} alt='Linkedin' />
                 </a>
                 <a href="https://github.com/Batuhankilac" target='_blank' rel='noopener noreferrer'>
-                  <img src={githublogo} alt='Github' />
+                  <img src={githublogo} alt='Github' class="github-logo" />
                   </a>
                 <a href="https://www.instagram.com/batuklac/" target='_blank' rel='noopener noreferrer'>
                   <img src={navIcon3} alt='Instagram' />

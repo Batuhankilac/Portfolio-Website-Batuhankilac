@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg"; // Make sure to replace with your actual image path
+import headerImg from "../assets/img/undraw_welcome-aboard.svg" // Make sure to replace with your actual image path
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -52,7 +52,7 @@ export const Banner = () => {
                     <TrackVisibility>
                     {({ isVisible }) => 
                     <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                        <span className="tagline">Welcome to my Portfolio</span>
+                        <span className="tagline" >Welcome to my Portfolio</span>
                         <h1>Hi! I'm Batuhan<span className="wrap"> {text}</span></h1>
                         <p>I'm a passionate software developer with a focus on creating innovative solutions. I love coding and am always eager to learn new technologies.</p>
                         <button onClick={() => console.log('connect')} className="vvd"><span>Let's Connect <ArrowRightCircle size={25}/> </span></button>
