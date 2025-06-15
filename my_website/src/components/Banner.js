@@ -12,7 +12,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const toRotate = ["Computer Engineer", "Software Developer", "Game Developer"];
     const [delta, setDelta] = useState(200 - Math.random() * 100);
-    const period = 6000; // Adjust the typing speed
+    const period = 2000; // Adjust the typing speed
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -40,7 +40,7 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(350); // Reset typing speed when starting a new word
         }
     }
 
@@ -53,7 +53,7 @@ export const Banner = () => {
                     {({ isVisible }) => 
                     <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                         <span className="tagline" >Welcome to my Portfolio</span>
-                        <h1>Hi! I'm Batuhan<span className="wrap"> {text}</span></h1>
+                        <h1>Hi! I'm Batuhan, I am a<span className="wrap"> {text}</span></h1>
                         <p>I'm a passionate software developer with a focus on creating innovative solutions. I love coding and am always eager to learn new technologies.</p>
                         <button onClick={() => console.log('connect')} className="vvd"><span>Let's Connect <ArrowRightCircle size={25}/> </span></button>
                     </div>}

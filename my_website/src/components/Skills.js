@@ -5,6 +5,8 @@ import meter2 from "../assets/img/unity-logo.png";
 import meter3 from "../assets/img/python-logo.png";
 import meter4 from "../assets/img/blender-logo.svg";
 import colorSharp from "../assets/img/solgörsel.png";
+import colorSharp2 from "../assets/img/sağgörsel.png";
+
 
 export const Skills = () => {
     const responsive = {
@@ -77,6 +79,7 @@ export const Skills = () => {
                 </Row>
             </Container>
             <img className="background-image-left" src={colorSharp} alt="Background" />
+            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     );
 }
