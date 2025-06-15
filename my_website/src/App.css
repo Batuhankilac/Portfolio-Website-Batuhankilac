@@ -410,7 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background: linear-gradient(120.21deg, #ffde59 -4.91%, #ff914d 111.58%);
 }
 .project h2 {
 	font-size: 45px;
@@ -419,7 +419,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
 }
 .project p {
-  color: #B8B8B8;
+  color: #fff;
   font-size: 36px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -456,7 +456,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(270.21deg, #ff914d -5.91%, #e0feca 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -488,7 +488,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #ff914d -5.91%, #e0feca 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -601,7 +601,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background: linear-gradient(90.21deg, #e0feca -5.91%, #ff914d 111.58%);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
