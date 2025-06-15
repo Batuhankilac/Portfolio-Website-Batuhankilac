@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
+import githublogo from '../assets/img/github-icon.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 
@@ -46,9 +46,15 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icons">
-                <a href="#https://www.linkedin.com/in/batuhan-kilac-0061921a8/"><img src={navIcon1} alt='' /></a>
-                <a href="#https://www.facebook.com/batuhankilac"><img src={navIcon2} alt='' /></a>
-                <a href="#https://www.instagram.com/batuklac/"><img src={navIcon3} alt='' /></a>
+                <a href="https://www.linkedin.com/in/batuhan-kilac-0061921a8/" target='_blank' rel='noopener noreferrer'>
+                  <img src={navIcon1} alt='Linkedin' />
+                </a>
+                <a href="https://github.com/Batuhankilac" target='_blank' rel='noopener noreferrer'>
+                  <img src={githublogo} alt='Github' />
+                  </a>
+                <a href="https://www.instagram.com/batuklac/" target='_blank' rel='noopener noreferrer'>
+                  <img src={navIcon3} alt='Instagram' />
+                </a>
             </div>
             <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
           </span>

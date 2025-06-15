@@ -84,6 +84,7 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -115,23 +116,26 @@ span.navbar-text {
     display: flex;
     align-items: center;
 }
-.social-icon {
+.social-icons {
     display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-left: 14px;
 }
-.social-icon a {
+
+.social-icons a {
     width: 42px;
     height: 42px;
     background: rgba(217, 217, 217, 0.1);
     display: inline-flex;
-    border-radius: 50%;
-    margin-right: 6px;
+    border-radius: 50%; /* Yuvarlak şekil için */
     align-items: center;
     justify-content: center;
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease-in-out;
 }
-.social-icon a::before {
+.social-icons a::before {
     content: "";
     width: 42px;
     height: 42px;
@@ -139,19 +143,24 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-	transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
-.social-icon a:hover::before {
-    transform: scale(1);
+
+.social-icons a:hover::before {
+  transform: scale(1); /* Hoverda büyütme efekti */
 }
-.social-icon a img {
-	width: 40%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
+
+.social-icons a img {
+  width: 24px; /* İkonun boyutu */
+  z-index: 1;
+  transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+
+.social-icons a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  transform: scale(1.1); /* Hoverda ikon büyütme efekti */
 }
+
 .navbar-text button {
   font-weight: 700;
   color: #fff;
@@ -307,11 +316,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 0 50px 0;
   position: relative;
 }
+
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 60px 40px;
   margin-top: -60px;
 }
 .skill h2 {
@@ -325,15 +335,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     line-height: 1.5em;
     margin: 14px 0 75px 0;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
+
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 }
+
+.skill-slider .carousel-item {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 450px; /* Yüksekliği ayarladık */
+}
+
+.skill-slider .carousel-item img {
+  max-width: 30%;
+  height: auto;
+}
+
+.skill-slider .carousel-item .carousel-caption {
+  position: absolute;
+  bottom: 10px; /* Yazıyı alttan biraz daha yukarıya taşır */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.skill-slider .item h5 {
+  font-size: 20px;
+  color: #fff; /* Yazıyı beyaz yaparak net görünmesini sağlarız */
+  z-index: 3;
+}
+
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -352,10 +388,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
+  margin-bottom: 20px;
 }
 .project p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 36px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
@@ -468,7 +505,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contacts Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
